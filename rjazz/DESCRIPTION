@@ -1,0 +1,12 @@
+Package: rjazz
+Type: Package
+Title: Official R client for Jazz
+Version: 0.1.07
+Date: 2016-12-15
+Depends: R (>= 3.1.0)
+Imports: stats, RCurl
+Author: Santiago Basaldua
+Maintainer: Santiago Basaldua <santiago.basaldua@bbva.com>
+Description: This is the official R Jazz client developed at BBVA Data & Analytics, the owners of Jazz.
+License: Apache License (== 2.0)
+NeedsCompilation: no
