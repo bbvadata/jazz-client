@@ -24,6 +24,7 @@ options(warn=2)
 run	  <- c('library(rjazz)', '')
 todos <- FALSE
 
+
 check_todo <- function(doc)
 {
 	cat(doc, '\n')
@@ -52,12 +53,12 @@ check_todo <- function(doc)
 	run <<- c(run, '', 'rm(list = ls())', '', txt[(ix + 2):(ex[1] - 1)])
 }
 
-docs <- sort(list.files('~/da_jazz_rjazz/rjazz/man', full.names = T))
+docs <- sort(list.files('./rjazz/man', full.names = T))
 
 for (doc in docs) check_todo(doc)
 
-writeLines(run, '~/da_jazz_rjazz/all_examples.R')
+writeLines(run, './all_examples.R')
 
 if (todos) stop('TODOs found.')
 
-if (system('hostname', intern = T) == '424x4') source('~/da_jazz_rjazz/all_examples.R')
+source('./all_examples.R')
